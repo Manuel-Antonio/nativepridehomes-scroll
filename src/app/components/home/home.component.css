@@ -1,0 +1,81 @@
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 1s ease-in-out 0.5s;
+  }
+  
+  .animate-bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  section#home {
+    position: relative;
+    overflow: hidden;
+    background-image: url("/assets/imgs/project3.jpg");
+  }
+  
+  section#home .absolute {
+    position: absolute;
+  }
+  
+  section#home .relative {
+    position: relative;
+  }
+  
+  .btn-contact {
+    background-color: var(--accent-color)
+  }
+  .btn-contact:hover {
+    
+  }
+
+  .link-effect {
+    color: var(--accent-color);
+    transition: color 0.3s, transform 0.3s;
+    transform: translateX(-50%);
+  }
+  
+  .link-effect:hover, .link-effect:focus {
+    color: var(--white-color);
+    background-color: var(--accent-color);
+    transform: translateY(-12px);
+    transform: translateX(-50%);
+  }
+  
+  .link-effect:active {
+    color: var(--white-color);
+    transform: translateY(0);
+    transform: translateX(-50%);
+  }
+  

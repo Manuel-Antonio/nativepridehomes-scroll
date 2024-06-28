@@ -1,0 +1,36 @@
+/* General styles for the services section */
+#services h2, #services h3 {
+    color: var(--primary-color);
+  }
+  
+  #services p {
+    color: var(--secondary-color);
+  }
+  
+  /* Dark mode styles */
+  body.dark-mode #services {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  body.dark-mode #services h2, body.dark-mode #services h3 {
+    color: var(--text-color);
+  }
+  
+  body.dark-mode #services p {
+    color: var(--secondary-color);
+  }
+  
+  body.dark-mode #services .fas {
+    color: var(--accent-color);
+  }
+  
+  /* Hover effects */
+  #services .rounded-lg {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #services .rounded-lg:hover {
+    transform: scale(1.05);
+  }
+  

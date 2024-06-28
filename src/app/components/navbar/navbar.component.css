@@ -1,0 +1,59 @@
+/* Nav Styles */
+nav {
+  background-color: var(--nav-bg-color);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+nav.sticky {
+  background-color: var(--nav-bg-color);
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+  color: var(--nav-text-color);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.nav-link:hover, .nav-link:focus {
+  color: var(--nav-hover-color);
+  transform: translateY(-2px);
+}
+
+.nav-link:active {
+  color: var(--primary-color);
+  transform: translateY(0);
+}
+
+/* Theme Button Styles */
+.theme-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-one {
+  background: linear-gradient(135deg, blue, red);
+}
+
+.theme-two {
+  background: linear-gradient(135deg, green, lightblue);
+}
+
+.theme-toggle {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-toggle .fa-moon {
+  color: var(--nav-text-color);
+}
+
+.theme-toggle .fa-sun {
+  color: var(--nav-text-color);
+}

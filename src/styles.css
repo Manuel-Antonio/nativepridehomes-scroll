@@ -1,1 +1,95 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #1a202c;
+  --secondary-color: #2d3748;
+  --accent-color: #901d20;
+  --text-color: #2d3748;
+  --background-color: #f7fafc;
+  --white-color: white;
+  --light-color: #edf2f7;
+  --soft-accent-color: #fff6f7;
+  --nav-bg-color: white;
+  --nav-text-color: #1a202c;
+  --nav-hover-color: #4a5568;
+}
+.theme-dark {
+  --primary-color: #edf2f7;
+  --secondary-color: #e2e8f0;
+  --accent-color: #901d20;
+  --text-color: #e9e9e9;
+  --background-color: #1a202c;
+  --white-color: white;
+  --light-color: #edf2f7;
+  --soft-accent-color: #292f3d;
+  --nav-bg-color: #1a202c;
+  --nav-text-color: #edf2f7;
+  --nav-hover-color: #cbd5e0;
+}
+
+html,
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--nav-text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--nav-text-color);
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--nav-hover-color);
+}
+
+input,
+textarea {
+  border-color: var(--secondary-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--secondary-color);
+}
+
+.text-primary-color {
+  color: var(--primary-color);
+}
+
+.text-secondary-color {
+  color: var(--secondary-color);
+}
+
+.text-text-color {
+  color: var(--text-color);
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.bg-background-color {
+  background-color: var(--background-color);
+}
+
+.transition-colors {
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.hover\:text-secondary-color:hover {
+  color: var(--secondary-color);
+}

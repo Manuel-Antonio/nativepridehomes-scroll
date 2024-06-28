@@ -1,0 +1,64 @@
+<nav
+  class="fixed top-0 w-full bg-white shadow-lg z-50 transition-all duration-300 bg-opacity-90"
+  [class.sticky]="isSticky"
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16 items-center">
+      <div class="flex-shrink-0">
+        <a href="#home" class="nav-link text-2xl font-bold text-gray-800"
+          >
+          <img src="assets/icons/icono_native.svg" alt="" class="w-10 h-10">
+          </a
+        >
+      </div>
+      <div class="flex items-center space-x-4">
+        <div class="hidden md:flex space-x-4">
+          <a
+            href="#home"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >About</a
+          >
+          <a
+            href="#services"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >Services</a
+          >
+          <a
+            href="#gallery"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >Gallery</a
+          >
+          <a
+            href="#testimonials"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="nav-link px-3 py-2 rounded-md text-sm font-medium"
+            >Contact</a
+          >
+        </div>
+        <div class="flex space-x-2">
+          <button
+            class="theme-button theme-one"
+            (click)="setTheme('theme-one')"
+          ></button>
+          <button
+            class="theme-button theme-two"
+            (click)="setTheme('theme-two')"
+          ></button>
+          <button class="theme-toggle" (click)="toggleDarkMode()">
+            <i class="fa-solid fa-sun" *ngIf="isDarkMode"></i>
+            <i class="fa-solid fa-moon" *ngIf="!isDarkMode"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

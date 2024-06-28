@@ -1,0 +1,42 @@
+<section id="testimonials" class="py-16 bg-background-color transition-colors duration-300">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-8 text-text-color">Client Testimonials</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Testimonials Carousel -->
+      <div class="md:col-span-2 relative">
+        <div class="relative h-96 overflow-hidden">
+          <div class="absolute inset-0 flex items-center justify-center transition-transform duration-500" *ngIf="showTestimonial" [@testimonialSlide]>
+            <div class="bg-primary-color p-6 rounded shadow-lg max-w-lg mx-auto h-full flex flex-col justify-center">
+              <img [src]="testimonials[currentIndex].img" [alt]="testimonials[currentIndex].clientName" class="h-16 w-16 rounded-full mx-auto mb-4">
+              <p class="italic text-text-color mb-4">"{{ testimonials[currentIndex].feedback }}"</p>
+              <h4 class="text-lg font-semibold text-text-color">{{ testimonials[currentIndex].clientName }}</h4>
+              <div class="flex justify-center mt-2">
+                <ng-container *ngFor="let star of [1, 2, 3, 4, 5]; let i = index">
+                  <i class="fa" [ngClass]="{
+                    'fa-star text-yellow-500': i < testimonials[currentIndex].rating,
+                    'fa-star-o text-gray-400': i >= testimonials[currentIndex].rating
+                  }"></i>
+                </ng-container>
+              </div>
+              <p class="text-sm text-secondary-color mt-2">{{ testimonials[currentIndex].projectDescription }}</p>
+              <p class="text-xs text-gray-500 mt-2">{{ testimonials[currentIndex].date }}</p>
+              <a [href]="testimonials[currentIndex].link" target="_blank" class="text-sm text-blue-600 dark:text-blue-400 hover:underline mt-2">Read more</a>
+            </div>
+          </div>
+          <button (click)="prevTestimonial()" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white py-2 px-4 rounded-full mx-2 hover:bg-gray-400 dark:hover:bg-gray-600 transition">‹</button>
+          <button (click)="nextTestimonial()" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white py-2 px-4 rounded-full mx-2 hover:bg-gray-400 dark:hover:bg-gray-600 transition">›</button>
+        </div>
+      </div>
+
+      <!-- Testimonials Information -->
+      <div class="md:col-span-1">
+        <div class="bg-primary-color p-6 rounded shadow h-full flex flex-col justify-center">
+          <h3 class="text-xl font-semibold mb-2 text-text-color">About Our Testimonials</h3>
+          <p class="mb-4 text-text-color">Discover what our clients have to say about their experiences with our construction projects.</p>
+          <p class="text-secondary-color">Each testimonial reflects our commitment to quality, craftsmanship, and client satisfaction. Explore how we bring dreams to life through meticulous attention to detail.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

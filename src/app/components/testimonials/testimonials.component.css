@@ -1,0 +1,74 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.left-0 {
+  left: 0;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.top-1\/2 {
+  top: 50%;
+}
+
+.transform {
+  transform: translateY(-50%);
+}
+
+button {
+  background-color: #f3f4f6;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #e5e7eb;
+}
+
+.h-96 {
+  height: 24rem;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.bg-primary-color {
+  background-color: var(--primary-color);
+}
+
+.bg-secondary-color {
+  background-color: var(--secondary-color);
+}
+
+.text-text-color {
+  color: var(--text-color);
+}
+
+.text-secondary-color {
+  color: var(--secondary-color);
+}
+
+.fa-star, .fa-star-o {
+  font-size: 1.25rem;
+  margin: 0 0.1rem;
+}
