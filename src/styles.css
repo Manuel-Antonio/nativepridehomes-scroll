@@ -3,93 +3,218 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #1a202c;
-  --secondary-color: #2d3748;
-  --accent-color: #901d20;
-  --text-color: #2d3748;
-  --background-color: #f7fafc;
-  --white-color: white;
-  --light-color: #edf2f7;
-  --soft-accent-color: #fff6f7;
-  --nav-bg-color: white;
-  --nav-text-color: #1a202c;
-  --nav-hover-color: #4a5568;
+  --color-primary: #901d20;
+  --color-secondary: #7d7262;
+  --color-info: #4a5568;
+  --color-dark: #1a202c;
+  --color-light: #f7fafc;
+  --color-white: #ffffff;
+  --color-accent:#901d20;
+  --color-accent2:#f7fafc;
 }
+
 .theme-dark {
-  --primary-color: #edf2f7;
-  --secondary-color: #e2e8f0;
-  --accent-color: #901d20;
-  --text-color: #e9e9e9;
-  --background-color: #1a202c;
-  --white-color: white;
-  --light-color: #edf2f7;
-  --soft-accent-color: #292f3d;
-  --nav-bg-color: #1a202c;
-  --nav-text-color: #edf2f7;
-  --nav-hover-color: #cbd5e0;
+  --color-info: #8093b4;
+  --color-dark: #f7fafc;
+  --color-light: #1a202c;
+  --color-white: #12161f;
+  --color-accent:#f7fafc;
+  --color-accent2:#c9b79d;
 }
 
 html,
 body {
   font-family: "Inter", sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: var(--color-light);
+  color: var(--color-info);
+  transition: all 0.3s;
 }
 
-a {
-  color: var(--nav-text-color);
+h2,
+h3,
+h4,
+h5,
+h6, a{
+  color: var(--color-dark);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-button {
-  background-color: var(--primary-color);
-  color: var(--nav-text-color);
-  transition: background-color 0.3s;
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-button:hover {
-  background-color: var(--nav-hover-color);
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-input,
-textarea {
-  border-color: var(--secondary-color);
-  background-color: var(--background-color);
-  color: var(--text-color);
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
 
-input::placeholder,
-textarea::placeholder {
-  color: var(--secondary-color);
+.animate-slide-in {
+  animation: slideIn 1s ease-in-out 0.5s;
+  translate: translateY(-20px) ;
 }
 
-.text-primary-color {
-  color: var(--primary-color);
+.animate-bounce {
+  animation: bounce 2s infinite;
 }
 
-.text-secondary-color {
-  color: var(--secondary-color);
+.panel-small-container {
+  background-color: var(--color-white);
+  transition: all 0.3s;
 }
 
-.text-text-color {
-  color: var(--text-color);
+nav {
+  background-color: var(--color-light);
+  transition: all 0.3s ease-in;
 }
 
-.bg-primary-color {
-  background-color: var(--primary-color);
+p {
+  color: var(--color-info);
+  transition: all 0.3s;
 }
 
-.bg-secondary-color {
-  background-color: var(--secondary-color);
+#home h1 {
+  color: var(--color-accent);
+  transition: all 0.3s;
+}
+#home p{
+  color: var(--color-dark);
+  transition: all 0.3s;
+}
+#home .bg-home {
+  background-color: var(--color-light);
+}
+#home .btn-contact {
+  background-color: var(--color-primary);
+}
+#home .btn-bottom {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+#home .logo-style {
+  background-color: var(--color-accent2);
+  transition: all 0.3s;
+  border: 4px dashed var(--color-secondary)
+
 }
 
-.bg-background-color {
-  background-color: var(--background-color);
+#services .panel-small-container i {
+  color: var(--color-secondary);
+  border-radius: 50%;
+  background-color: var(--color-light);
+  padding: 3px;
+  width: 4rem;
+  height:4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+#about .mission-style h3{
+  color: white;
+  
+}
+#about .mission-style p{
+  color: #ebebeb;
+  
+}
+#about .mission-style{
+  background-color: var(--color-primary);
+  
+}
+#about .vision-style {
+  background-color: var(--color-secondary);
+}
+#about .vision-style p {
+  color: #ebebeb;
+}
+#about .panel-core div {
+  border-left: 6px solid var(--color-secondary);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+#about .team-job {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+#services .panel-small-container .icon-service {
+  display: flex;
+  justify-content: center;
+
+}
+#gallery .panel-small-container {
+  transition: all 0.3s ease;
 }
 
-.transition-colors {
-  transition: color 0.3s, background-color 0.3s;
+#gallery .panel-small-container:hover {
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.2), -8px 8px 0px var(--color-secondary);
+  background-color: var(--color-light);
+  transform: translateY(-5px);
 }
 
-.hover\:text-secondary-color:hover {
-  color: var(--secondary-color);
+#gallery button {
+  background-color: var(--color-white);
+  color:var(--color-dark);
+  transition: all 0.3s;
+}
+#gallery button:hover, #gallery button:focus {
+  background-color: var(--color-primary);
+  color: #f7fafc;
+}
+
+#testimonials button {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+#contact i{
+  color: var(--color-primary);
+}
+#contact textarea, #contact input {
+  color: var(--color-dark);
+  transition: all 0.3s;
+} 
+#contact textarea:focus, #contact input:focus {
+  border: 1px solid var(--color-primary);
+}
+#contact button {
+  background-color: var(--color-primary);
+  color: #f7fafc;
+}
+.alert-error {
+  color: var(--color-primary);
+}
+
+footer {
+  background-color: var(--color-white);
+  transition: all 0.3s;
+}
+footer .social-networks a:hover{
+  color: var(--color-dark);
+  transition: all 0.3s;
+}
+.btn-scroll {
+  background-color: var(--color-primary);
+  color: #f7fafc;
 }

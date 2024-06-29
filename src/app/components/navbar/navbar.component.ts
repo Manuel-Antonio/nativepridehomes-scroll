@@ -8,7 +8,7 @@ import { saveTheme, loadTheme } from 'src/app/utils/theme-utils';
 })
 export class NavbarComponent implements AfterViewInit {
   isSticky: boolean = false;
-
+  menuOpen: boolean = false;
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     this.isSticky = window.pageYOffset > 0;
@@ -71,5 +71,10 @@ export class NavbarComponent implements AfterViewInit {
       document.body.classList.remove('theme-dark');
     }
   }
+  // Método para cambiar el estado del menú
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
 
 }

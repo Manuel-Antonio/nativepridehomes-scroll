@@ -1,27 +1,19 @@
 /* Nav Styles */
-nav {
-  background-color: var(--nav-bg-color);
-  transition: background-color 0.3s, box-shadow 0.3s;
-}
+
 
 nav.sticky {
-  background-color: var(--nav-bg-color);
-  transition: background-color 0.3s, box-shadow 0.3s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-link {
-  color: var(--nav-text-color);
   transition: color 0.3s, transform 0.3s;
 }
 
 .nav-link:hover, .nav-link:focus {
-  color: var(--nav-hover-color);
   transform: translateY(-2px);
 }
 
 .nav-link:active {
-  color: var(--primary-color);
   transform: translateY(0);
 }
 
@@ -50,10 +42,32 @@ nav.sticky {
   cursor: pointer;
 }
 
-.theme-toggle .fa-moon {
-  color: var(--nav-text-color);
+.theme-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.theme-toggle .fa-sun {
-  color: var(--nav-text-color);
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: all .3s ease-in;
+  border-radius: 50%;
+}
+.btn-menu-movil {
+  color: var(--color-dark);
+  
+}
+.theme-one {
+  background-image: url('/image1.png');
+}
+.menu-links >a:focus{
+  background-color: var(--color-primary);
+  color: white;
 }

@@ -1,25 +1,37 @@
 <section
   id="home"
-  class="h-screen flex flex-col items-center justify-center bg-cover bg-center relative"
+  class="h-screen flex flex-col items-center justify-center bg-cover bg-center relative px-4"
 >
-  <div class="absolute inset-0 bg-black opacity-50"></div>
+  <div class="absolute inset-0 bg-home opacity-60"></div>
   <div class="text-center text-white relative z-10">
-    <h1 class=" text-6xl font-extrabold mb-6 animate-fade-in">
+    <div
+      class="mb-8 animate-slide-in logo-style w-52 h-52 mx-auto rounded-full hidden xl:block"
+    >
+      <div class="flex items-center justify-center w-52 h-52 mx-auto ">
+        <img src="assets/logov.svg" alt="" class="w-44" />
+      </div>
+    </div>
+    <h1 class="text-4xl md:text-5xl xl:text-6xl font-extrabold mb-6 animate-fade-in">
       COME HOME TO QUALITY
     </h1>
-    <p class="text-xl mb-10 animate-slide-in">
+    <p class="text-base md:text-md xl:text-xl mb-10 animate-fade-in">
       From start to end, we build your dream home with utmost care and quality.
     </p>
     <a
-      href="#about"
-      class="px-8 py-4 btn-contact text-white rounded-full transition-colors duration-300"
-      >Contact us</a
+      href="#contact"
+      class="px-8 btn-contact nav-link link-effect py-4 btn-contact text-white rounded-full transition-colors duration-300"
+    >
+      <i class="fa-solid fa-envelope"></i>
+      Contact us</a
     >
   </div>
   <div
-    class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce"
+    class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce hidden xl:block"
   >
-    <a href="#about" class="nav-link link-effect flex items-center justify-center rounded-full bg-white w-12 h-12">
+    <a
+      href="#about"
+      class="btn-bottom nav-link link-effect flex items-center justify-center rounded-full bg-white w-12 h-12"
+    >
       <i class="fas fa-chevron-down text-2xl"></i>
     </a>
   </div>

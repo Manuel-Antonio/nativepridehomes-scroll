@@ -1,7 +1,7 @@
-<section id="gallery" class="py-16 bg-background-color transition-colors duration-0">
+<section id="gallery" class="pt-20 bg-background-color transition-colors duration-0">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-8 text-text-color">Proyectos Destacados</h2>
-    <div class="flex justify-center mb-8">
+    <div class="flex justify-center mb-8 flex-wrap  gap-y-4">
       <button
         *ngFor="let category of categories"
         (click)="filterProjects(category)"
@@ -17,7 +17,7 @@
       </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div *ngFor="let project of filteredProjects" class="bg-primary-color p-6 rounded shadow-md transition-colors">
+      <div *ngFor="let project of filteredProjects" class="bg-primary-color p-6 rounded shadow-md panel-small-container">
         <img [src]="project.img" [alt]="project.name" class="h-48 w-full object-cover rounded mb-4">
         <h3 class="text-xl font-semibold mb-2 text-color">{{ project.name }}</h3>
         <p class="text-text-color">{{ project.description }}</p>
