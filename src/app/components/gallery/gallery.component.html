@@ -1,6 +1,6 @@
 <section id="gallery" class="pt-20 bg-background-color transition-colors duration-0">
   <div class="container mx-auto px-4 text-center">
-    <h2 class="text-3xl font-bold mb-8 text-text-color">Proyectos Destacados</h2>
+    <h2 class="text-3xl font-bold mb-8 text-text-color">Featured projects</h2>
     <div class="flex justify-center mb-8 flex-wrap  gap-y-4">
       <button
         *ngFor="let category of categories"
@@ -13,7 +13,7 @@
         (click)="clearFilter()"
         class="bg-secondary-color text-text-color py-2 px-4 rounded-full mx-2 hover:bg-accent-color transition-colors"
       >
-        Todos
+        All
       </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

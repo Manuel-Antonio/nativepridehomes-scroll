@@ -1,10 +1,20 @@
-<section id="contact" class="py-20 bg-background-color text-text-color transition-colors duration-300 px-6">
+<section
+  id="contact"
+  class="py-20 bg-background-color text-text-color transition-colors duration-300 px-6"
+>
   <div class="container mx-auto text-center">
     <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
-    <p class="mb-8">Get in touch and we’ll get back to you as soon as we can. We look forward to hearing from you!</p>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 mt-8">
+    <p class="mb-8">
+      Get in touch and we’ll get back to you as soon as we can. We look forward
+      to hearing from you!
+    </p>
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 mt-8"
+    >
       <!-- Phone -->
-      <div class="bg-white p-6 rounded shadow-md flex items-center panel-small-container">
+      <div
+        class="bg-white p-6 rounded shadow-md flex items-center panel-small-container"
+      >
         <i class="fas fa-phone-alt text-3xl text-blue-600 mr-4"></i>
         <div>
           <h3 class="text-xl font-semibold mb-2">Phone</h3>
@@ -12,15 +22,21 @@
         </div>
       </div>
       <!-- Email -->
-      <div class="bg-white p-6 rounded shadow-md flex items-center panel-small-container">
+      <div
+        class="bg-white p-6 rounded shadow-md flex items-center panel-small-container"
+      >
         <i class="fas fa-envelope text-3xl text-blue-600 mr-4"></i>
         <div>
           <h3 class="text-xl font-semibold mb-2">Email</h3>
-          <a href="mailto:nativepridehomes@gmail.com">nativepridehomes@gmail.com</a>
+          <a href="mailto:nativepridehomes@gmail.com"
+            >nativepridehomes@gmail.com</a
+          >
         </div>
       </div>
       <!-- Address -->
-      <div class="bg-white p-6 rounded shadow-md flex items-center panel-small-container">
+      <div
+        class="bg-white p-6 rounded shadow-md flex items-center panel-small-container"
+      >
         <i class="fas fa-map-marker-alt text-3xl text-blue-600 mr-4"></i>
         <div>
           <h3 class="text-xl font-semibold mb-2">Address</h3>
@@ -30,28 +46,73 @@
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <!-- Left Part: Google Map -->
-      <div>
-        <iframe 
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509507!2d144.95373531550448!3d-37.81720974202178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775d1e0b1b9cb2!2sFlinders%20Street%20Station!5e0!3m2!1sen!2sau!4v1601952364378!5m2!1sen!2sau" 
-          width="100%" 
-          height="450" 
-          frameborder="0" 
-          style="border:0;" 
-          allowfullscreen="" 
-          aria-hidden="false" 
-          tabindex="0">
+      <div data-aos="fade-up-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509507!2d144.95373531550448!3d-37.81720974202178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5775d1e0b1b9cb2!2sFlinders%20Street%20Station!5e0!3m2!1sen!2sau!4v1601952364378!5m2!1sen!2sau"
+          width="100%"
+          height="450"
+          frameborder="0"
+          style="border: 0"
+          allowfullscreen=""
+          aria-hidden="false"
+          tabindex="0"
+        >
         </iframe>
       </div>
-      
-      <form [formGroup]="contactForm" (ngSubmit)="mailToForm()" class="panel-small-container p-6 rounded shadow-md relative">
+
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="sendToMail()"
+        class="panel-small-container p-6 rounded shadow-md relative"
+      >
         <div class="mb-4">
+          <div class="text-left mb-1">
+            <label for="projectDescription" class="label-contact"
+            >Mail subject (*)</label
+          >
+          </div>
+          <input
+            type="text"
+            formControlName="subject"
+            placeholder="Example: Construction Services Request"
+            class="w-full px-4 py-3 border rounded-lg focus:outline-none bg-transparent"
+          />
+          <div
+            *ngIf="
+              contactForm.get('subject')?.invalid &&
+              (contactForm.get('subject')?.dirty ||
+                contactForm.get('subject')?.touched)
+            "
+            class="text-red-500"
+          >
+            <div *ngIf="contactForm.get('subject')?.errors?.['required']">
+              Subject is required.
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="text-left mb-1">
+            <label for="projectDescription" class="label-contact"
+            >Description (*)</label
+          >
+          </div>
           <textarea
+            id="projectDescription"
             formControlName="projectDescription"
-            placeholder="Project Description"
+            placeholder="Example: I am interested in your construction services for a residential project. Please contact me for more details."
             class="w-full h-40 px-4 py-3 border rounded-lg focus:outline-none bg-transparent"
           ></textarea>
-          <div *ngIf="contactForm.get('projectDescription')?.invalid && (contactForm.get('projectDescription')?.dirty || contactForm.get('projectDescription')?.touched)" class="text-red-500">
-            <div *ngIf="contactForm.get('projectDescription')?.errors?.['required']">
+          <div
+            *ngIf="
+              contactForm.get('projectDescription')?.invalid &&
+              (contactForm.get('projectDescription')?.dirty ||
+                contactForm.get('projectDescription')?.touched)
+            "
+            class="text-red-500"
+          >
+            <div
+              *ngIf="contactForm.get('projectDescription')?.errors?.['required']"
+            >
               Project description is required.
             </div>
           </div>
@@ -60,14 +121,23 @@
           <input
             type="email"
             formControlName="email"
-            placeholder="Email"
+            placeholder="Email: john.smith@example.com"
             class="w-full px-4 py-3 border rounded-lg focus:outline-none bg-transparent"
           />
-          <div *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)" class="text-red-500">
+          <div
+            *ngIf="
+              contactForm.get('email')?.invalid &&
+              (contactForm.get('email')?.dirty ||
+                contactForm.get('email')?.touched)
+            "
+            class="text-red-500"
+          >
             <div *ngIf="contactForm.get('email')?.errors?.['required']">
               Email is required.
             </div>
-            <div *ngIf="contactForm.get('email')?.errors?.['email'] && !contactForm.get('email')?.errors?.['required']">
+            <div
+              *ngIf="contactForm.get('email')?.errors?.['email'] && !contactForm.get('email')?.errors?.['required']"
+            >
               Invalid email format.
             </div>
           </div>
@@ -76,10 +146,17 @@
           <input
             type="text"
             formControlName="name"
-            placeholder="Name"
+            placeholder="Name: John Smith"
             class="w-1/2 px-4 py-3 border rounded-lg focus:outline-none bg-transparent"
           />
-          <div *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)" class="text-red-500">
+          <div
+            *ngIf="
+              contactForm.get('name')?.invalid &&
+              (contactForm.get('name')?.dirty ||
+                contactForm.get('name')?.touched)
+            "
+            class="text-red-500"
+          >
             <div *ngIf="contactForm.get('name')?.errors?.['required']">
               Name is required.
             </div>
@@ -87,22 +164,35 @@
           <input
             type="tel"
             formControlName="phone"
-            placeholder="Phone"
+            placeholder="Phone: (555) 123-4567"
             class="w-1/2 px-4 py-3 border rounded-lg focus:outline-none bg-transparent"
           />
         </div>
         <button
           type="submit"
-          class=" py-2 px-4 rounded-lg transition duration-300 w-full"
+          class="py-2 px-4 rounded-lg transition duration-300 w-full {{
+            this.contactForm.valid ? '' : 'opacity-50'
+          }}"
+          [disabled]="this.contactForm.invalid"
         >
-        <i class="fa-solid fa-paper-plane"></i>
-          Send
+          Generate Message
         </button>
-        <div class="mt-2 rounded-md bg-green-700 text-white p-2 text-sm animate-fade-in " *ngIf="isComplete">
-          {{message}}
-        </div>   
+        <p class="my-2">* Complete the form to activate the message button.</p>
+        <div
+          class="w-full mt-3 flex items-center justify-center gap-3"
+          *ngIf="isCompleteLink"
+        >
+          <i class="fa-solid fa-arrow-right text-2xl animate-bounce-x"></i>
+          <a
+            type="button"
+            [href]="mailToLink"
+            class="w-full block hover:underline"
+          >
+            <i class="fa-solid fa-paper-plane me-2"></i>
+            <span>Click for Send Message Generate</span>
+          </a>
+        </div>
       </form>
-         
     </div>
   </div>
 </section>

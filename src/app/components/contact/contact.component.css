@@ -1,4 +1,4 @@
-#contact i {
+#contact i{
   color: var(--color-primary);
 }
 #contact textarea,
@@ -13,4 +13,12 @@
 #contact button {
   background-color: var(--color-primary);
   color: #f7fafc;
+}
+#contact button i {
+  color: #f7fafc;
+}
+
+.label-contact {
+  color: var(--color-accent);
+  font-weight: 700;
 }
