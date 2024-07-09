@@ -1,2 +1,17 @@
-/* General styles for the services section */
+#services .panel-small-container i {
+  color: var(--color-secondary);
+  border-radius: 50%;
+  background-color: var(--color-light);
+  padding: 3px;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
 
+#services .panel-small-container .icon-service {
+  display: flex;
+  justify-content: center;
+}

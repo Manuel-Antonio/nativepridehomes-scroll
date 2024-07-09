@@ -1,0 +1,8 @@
+footer {
+  background-color: var(--color-white);
+  transition: all 0.3s;
+}
+footer .social-networks a:hover {
+  color: var(--color-dark);
+  transition: all 0.3s;
+}

@@ -1,0 +1,21 @@
+#gallery .panel-small-container {
+  transition: all 0.3s ease;
+}
+
+#gallery .panel-small-container:hover {
+  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.2),
+    -8px 8px 0px var(--color-secondary);
+  background-color: var(--color-light);
+  transform: translateY(-5px);
+}
+
+#gallery button {
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  transition: all 0.3s;
+}
+#gallery button:hover,
+#gallery button:focus {
+  background-color: var(--color-primary);
+  color: #f7fafc;
+}

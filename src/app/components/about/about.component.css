@@ -1,0 +1,23 @@
+#about .mission-style h3 {
+  color: white;
+}
+#about .mission-style p {
+  color: #ebebeb;
+}
+#about .mission-style {
+  background-color: var(--color-primary);
+}
+#about .vision-style {
+  background-color: var(--color-secondary);
+}
+#about .vision-style p {
+  color: #ebebeb;
+}
+#about .panel-core div {
+  border-left: 6px solid var(--color-secondary);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+#about .team-job {
+  color: var(--color-secondary);
+  font-weight: 600;
+}

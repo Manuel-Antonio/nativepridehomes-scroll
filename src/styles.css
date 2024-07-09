@@ -9,8 +9,8 @@
   --color-dark: #1a202c;
   --color-light: #f7fafc;
   --color-white: #ffffff;
-  --color-accent:#901d20;
-  --color-accent2:#f7fafc;
+  --color-accent: #901d20;
+  --color-accent2: #f7fafc;
 }
 
 .theme-dark {
@@ -18,8 +18,8 @@
   --color-dark: #f7fafc;
   --color-light: #1a202c;
   --color-white: #12161f;
-  --color-accent:#f7fafc;
-  --color-accent2:#c9b79d;
+  --color-accent: #f7fafc;
+  --color-accent2: #c9b79d;
 }
 
 html,
@@ -34,7 +34,8 @@ h2,
 h3,
 h4,
 h5,
-h6, a{
+h6,
+a {
   color: var(--color-dark);
   transition: background-color 0.3s, box-shadow 0.3s;
 }
@@ -59,7 +60,8 @@ h6, a{
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -73,7 +75,7 @@ h6, a{
 
 .animate-slide-in {
   animation: slideIn 1s ease-in-out 0.5s;
-  translate: translateY(-20px) ;
+  translate: translateY(-20px);
 }
 
 .animate-bounce {
@@ -93,128 +95,4 @@ nav {
 p {
   color: var(--color-info);
   transition: all 0.3s;
-}
-
-#home h1 {
-  color: var(--color-accent);
-  transition: all 0.3s;
-}
-#home p{
-  color: var(--color-dark);
-  transition: all 0.3s;
-}
-#home .bg-home {
-  background-color: var(--color-light);
-}
-#home .btn-contact {
-  background-color: var(--color-primary);
-}
-#home .btn-bottom {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-}
-#home .logo-style {
-  background-color: var(--color-accent2);
-  transition: all 0.3s;
-  border: 4px dashed var(--color-secondary)
-
-}
-
-#services .panel-small-container i {
-  color: var(--color-secondary);
-  border-radius: 50%;
-  background-color: var(--color-light);
-  padding: 3px;
-  width: 4rem;
-  height:4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s;
-}
-#about .mission-style h3{
-  color: white;
-  
-}
-#about .mission-style p{
-  color: #ebebeb;
-  
-}
-#about .mission-style{
-  background-color: var(--color-primary);
-  
-}
-#about .vision-style {
-  background-color: var(--color-secondary);
-}
-#about .vision-style p {
-  color: #ebebeb;
-}
-#about .panel-core div {
-  border-left: 6px solid var(--color-secondary);
-  border-radius: 0 0.5rem 0.5rem 0;
-}
-#about .team-job {
-  color: var(--color-secondary);
-  font-weight: 600;
-}
-#services .panel-small-container .icon-service {
-  display: flex;
-  justify-content: center;
-
-}
-#gallery .panel-small-container {
-  transition: all 0.3s ease;
-}
-
-#gallery .panel-small-container:hover {
-  box-shadow: -8px 8px 15px rgba(0, 0, 0, 0.2), -8px 8px 0px var(--color-secondary);
-  background-color: var(--color-light);
-  transform: translateY(-5px);
-}
-
-#gallery button {
-  background-color: var(--color-white);
-  color:var(--color-dark);
-  transition: all 0.3s;
-}
-#gallery button:hover, #gallery button:focus {
-  background-color: var(--color-primary);
-  color: #f7fafc;
-}
-
-#testimonials button {
-  background-color: var(--color-dark);
-  color: var(--color-light);
-}
-
-#contact i{
-  color: var(--color-primary);
-}
-#contact textarea, #contact input {
-  color: var(--color-dark);
-  transition: all 0.3s;
-} 
-#contact textarea:focus, #contact input:focus {
-  border: 1px solid var(--color-primary);
-}
-#contact button {
-  background-color: var(--color-primary);
-  color: #f7fafc;
-}
-.alert-error {
-  color: var(--color-primary);
-}
-
-footer {
-  background-color: var(--color-white);
-  transition: all 0.3s;
-}
-footer .social-networks a:hover{
-  color: var(--color-dark);
-  transition: all 0.3s;
-}
-.btn-scroll {
-  background-color: var(--color-primary);
-  color: #f7fafc;
 }

@@ -1,0 +1,16 @@
+#contact i {
+  color: var(--color-primary);
+}
+#contact textarea,
+#contact input {
+  color: var(--color-dark);
+  transition: all 0.3s;
+}
+#contact textarea:focus,
+#contact input:focus {
+  border: 1px solid var(--color-primary);
+}
+#contact button {
+  background-color: var(--color-primary);
+  color: #f7fafc;
+}

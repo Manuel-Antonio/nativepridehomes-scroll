@@ -10,6 +10,10 @@ export class ContactComponent {
   contactForm: FormGroup;
   message: string = '';
   isComplete: boolean = false;
+  recipient = 'destinatario@example.com';
+  subject = 'Asunto del correo';
+  body = 'Contenido del correo';
+
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
       projectDescription: ['', Validators.required],
@@ -21,9 +25,9 @@ export class ContactComponent {
 
   ngOnInit(): void {}
 
-  submitForm() {
+  mailToForm() {
     if (this.contactForm.valid) {
-      // Aquí puedes enviar los datos del formulario, por ejemplo:
+
       console.log('Formulario válido, datos enviados:', this.contactForm.value);
       this.message = '📩 Form submitted successfully! 🎉🎉';
       // Puedes resetear el formulario después del envío exitoso
