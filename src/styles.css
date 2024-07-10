@@ -28,6 +28,7 @@ body {
   background-color: var(--color-light);
   color: var(--color-info);
   transition: all 0.3s;
+  overflow-x: hidden;
 }
 
 h2,
