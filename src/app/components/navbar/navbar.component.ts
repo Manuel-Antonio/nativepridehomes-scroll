@@ -1,4 +1,5 @@
-import { Component, HostListener, AfterViewInit, HostBinding } from '@angular/core';
+import { Component, HostListener, AfterViewInit, HostBinding, OnInit } from '@angular/core';
+import { ActiveSectionService } from 'src/app/services/active-section.service';
 import { saveTheme, loadTheme } from 'src/app/utils/theme-utils';
 
 @Component({
@@ -6,9 +7,14 @@ import { saveTheme, loadTheme } from 'src/app/utils/theme-utils';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })
-export class NavbarComponent implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit, OnInit {
   isSticky: boolean = false;
   menuOpen: boolean = false;
+  activeSection!: string;
+
+  constructor(private activeSectionService: ActiveSectionService) {
+
+  }
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     this.isSticky = window.pageYOffset > 0;
@@ -40,6 +46,9 @@ export class NavbarComponent implements AfterViewInit {
     this.loadSavedTheme();
     this.isDarkMode = localStorage.getItem('theme') === 'dark';
     this.applyTheme();
+    this.activeSectionService.activeSection$.subscribe(section => {
+      this.activeSection = section;
+    });
   }
 
   setTheme(theme: string): void {

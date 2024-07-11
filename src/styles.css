@@ -11,7 +11,7 @@
   --color-white: #ffffff;
   --color-accent: #901d20;
   --color-accent2: #f7fafc;
-  --color-light-transparent: rgba(255, 255, 255, 0.9);
+  --color-light-transparent: rgba(255, 255, 255, 0.95);
 }
 
 .theme-dark {
@@ -21,7 +21,7 @@
   --color-white: #12161f;
   --color-accent: #f7fafc;
   --color-accent2: #c9b79d;
-  --color-light-transparent: rgba(26, 32, 44, 0.9);
+  --color-light-transparent: rgba(26, 32, 44, 0.95);
 }
 
 html,
@@ -31,6 +31,7 @@ body {
   color: var(--color-info);
   transition: all 0.3s;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 h2,
@@ -111,4 +112,27 @@ nav {
 p {
   color: var(--color-info);
   transition: all 0.3s;
+}
+/* ---------------------- */
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.active-nav-link {
+  background-color: var(--color-primary);
+  color: white;
 }

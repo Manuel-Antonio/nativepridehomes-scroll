@@ -19,12 +19,12 @@
       </div>
       <div class="hidden md:flex items-center space-x-4 menu-links ">
         <!-- Opciones del menú -->
-        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Home</a>
-        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-bold">About</a>
-        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Services</a>
-        <a href="#gallery" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Gallery</a>
-        <a href="#testimonials" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Testimonials</a>
-        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Contact</a>
+        <a [class.active-nav-link]="activeSection === 'home'" href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Home</a>
+        <a [class.active-nav-link]="activeSection === 'about'" href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-bold">About</a>
+        <a [class.active-nav-link]="activeSection === 'services'" href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Services</a>
+        <a [class.active-nav-link]="activeSection === 'gallery'" href="#gallery" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Gallery</a>
+        <a [class.active-nav-link]="activeSection === 'testimonials'" href="#testimonials" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Testimonials</a>
+        <a [class.active-nav-link]="activeSection === 'contact'" href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-bold">Contact</a>
       </div>
       <!-- Botones de tema y modo oscuro -->
       <div class="flex space-x-2">
