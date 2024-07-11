@@ -12,6 +12,7 @@ export class NavbarComponent implements AfterViewInit {
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     this.isSticky = window.pageYOffset > 0;
+    
   }
 
   toggleTheme() {

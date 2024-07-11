@@ -11,6 +11,7 @@
   --color-white: #ffffff;
   --color-accent: #901d20;
   --color-accent2: #f7fafc;
+  --color-light-transparent: rgba(255, 255, 255, 0.9);
 }
 
 .theme-dark {
@@ -20,6 +21,7 @@
   --color-white: #12161f;
   --color-accent: #f7fafc;
   --color-accent2: #c9b79d;
+  --color-light-transparent: rgba(26, 32, 44, 0.9);
 }
 
 html,
@@ -102,7 +104,7 @@ a {
 }
 
 nav {
-  background-color: var(--color-light);
+ background-color: transparent;
   transition: all 0.3s ease-in;
 }
 
