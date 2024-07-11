@@ -153,3 +153,21 @@ p {
   background: var(--color-primary); /* Green background for progress bar */
   transition: width 0.25s;
 }
+
+
+.project-image-container {
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.project-image {
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-image-container:hover .project-image {
+  transform: scale(1.2);
+}
