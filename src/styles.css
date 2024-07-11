@@ -150,17 +150,3 @@ p {
 }
 
 
-.project-image-container {
-  overflow: hidden;
-}
-
-.project-image {
-  transition: transform 0.5s ease;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.project-image-container:hover .project-image {
-  transform: scale(1.2);
-}

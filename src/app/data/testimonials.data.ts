@@ -4,55 +4,49 @@ export const testimonials: Testimonial[] = [
   new Testimonial(
     'Emily Johnson',
     'The company did an exceptional job on our house. Highly recommended!',
-    'assets/perfils/perfil1.png',
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740267/NativePrideHomes/testimonials/perfil1_neee4e.png',
     'Detailed and precise work on the new extension of our house.',
     'June 1, 2023',
-    'https://example.com/testimonial/emily-johnson',
-    5 // Calificación de 5 estrellas
+    5
   ),
   new Testimonial(
     'Michael Smith',
     'Professional and efficient. The result was impressive.',
-    'assets/perfils/perfil2.png',
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740268/NativePrideHomes/testimonials/perfil2_gyebpu.png',
     'Efficient completion of our office renovation.',
     'July 12, 2023',
-    'https://example.com/testimonial/michael-smith',
-    4 // Calificación de 4 estrellas
+    4
   ),
   new Testimonial(
     'Sarah Williams',
-    'Outstanding quality and attention to detail. Couldn\'t be happier.',
-    'assets/perfils/perfil3.png',
+    "Outstanding quality and attention to detail. Couldn't be happier.",
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740269/NativePrideHomes/testimonials/perfil3_bdoct0.png',
     'Excellent craftsmanship on our new kitchen.',
     'August 5, 2023',
-    'https://example.com/testimonial/sarah-williams',
-    5 // Calificación de 5 estrellas
+    5
   ),
   new Testimonial(
     'David Brown',
     'Excellent service and workmanship. The team exceeded our expectations.',
-    'assets/perfils/perfil4.png',
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740266/NativePrideHomes/testimonials/perfil4_os3lbs.png',
     'Amazing job on our backyard landscaping.',
     'September 10, 2023',
-    'https://example.com/testimonial/david-brown',
-    4 // Calificación de 4 estrellas
+    4
   ),
   new Testimonial(
     'Jessica Taylor',
     'From start to finish, the process was seamless and stress-free.',
-    'assets/perfils/perfil5.png',
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740265/NativePrideHomes/testimonials/perfil5_kvfwmq.png',
     'Smooth and hassle-free renovation of our living room.',
     'October 20, 2023',
-    'https://example.com/testimonial/jessica-taylor',
-    5 // Calificación de 5 estrellas
+    5
   ),
   new Testimonial(
     'John Davis',
     'Their commitment to quality is evident in every aspect of the project.',
-    'assets/perfils/perfil6.png',
+    'https://res.cloudinary.com/djsl4a5py/image/upload/v1720740266/NativePrideHomes/testimonials/perfil6_lpddcx.png',
     'High-quality construction of our new garage.',
     'November 15, 2023',
-    'https://example.com/testimonial/john-davis',
-    5 // Calificación de 5 estrellas
-  )
+    5
+  ),
 ];

@@ -25,7 +25,7 @@
 section#home {
   position: relative;
   overflow: hidden;
-  background-image: url("/assets/imgs/project3.jpg");
+  background-image: url("https://res.cloudinary.com/djsl4a5py/image/upload/v1720741203/NativePrideHomes/proyects/project5_qnn32b.jpg");
   background-attachment: fixed;
 }
 
