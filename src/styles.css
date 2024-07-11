@@ -132,11 +132,6 @@ p {
   background: #555;
 }
 
-.active-nav-link {
-  background-color: var(--color-primary);
-  color: white;
-}
-
 .progress-container {
   position: fixed;
   bottom: 0;
@@ -157,8 +152,6 @@ p {
 
 .project-image-container {
   overflow: hidden;
-  position: relative;
-  margin: 0 auto;
 }
 
 .project-image {

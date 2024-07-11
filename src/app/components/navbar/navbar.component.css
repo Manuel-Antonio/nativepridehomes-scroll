@@ -7,18 +7,15 @@ nav.mysticky {
   transition: color 0.3s, transform 0.3s;
 }
 
-.nav-link:hover, .nav-link:focus {
-  transform: translateY(-2px);
-  
-}
 .nav-link:hover {
+  background-color: var(--color-primary);
+  opacity: .7;
+  color: white;
+}
+.active-nav-link {
   background-color: var(--color-primary);
   color: white;
 }
-.nav-link:active {
-  transform: translateY(0);
-}
-
 /* Theme Button Styles */
 .theme-button {
   width: 24px;
@@ -72,4 +69,9 @@ nav.mysticky {
 .menu-links >a:focus{
   background-color: var(--color-primary);
   color: white;
+}
+
+.dropdown-menu {
+  background-color: var(--color-light-transparent);
+
 }
