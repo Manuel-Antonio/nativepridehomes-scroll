@@ -20,8 +20,13 @@ export class AppComponent implements OnInit{
     if (sections[index]) {
       this.activeSectionService.setActiveSection(sections[index].id);
     }
+
+    const progressBar = document.getElementById('progressBar') as HTMLElement;
+    const totalHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = (window.scrollY / totalHeight) * 100;
+    progressBar.style.width = progress + '%';
   }
-  
+
   ngOnInit() {
     AOS.init({
       duration: 600,

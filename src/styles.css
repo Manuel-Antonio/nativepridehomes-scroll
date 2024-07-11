@@ -136,3 +136,20 @@ p {
   background-color: var(--color-primary);
   color: white;
 }
+
+.progress-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #f3f4f6; /* Light gray background */
+  z-index: 100;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: var(--color-primary); /* Green background for progress bar */
+  transition: width 0.25s;
+}
