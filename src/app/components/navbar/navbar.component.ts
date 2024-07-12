@@ -1,4 +1,10 @@
-import { Component, HostListener, AfterViewInit, HostBinding, OnInit } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  AfterViewInit,
+  HostBinding,
+  OnInit,
+} from '@angular/core';
 import { ActiveSectionService } from 'src/app/services/active-section.service';
 import { saveTheme, loadTheme } from 'src/app/utils/theme-utils';
 
@@ -12,17 +18,13 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   menuOpen: boolean = false;
   activeSection!: string;
 
-  constructor(private activeSectionService: ActiveSectionService) {
-
-  }
+  constructor(private activeSectionService: ActiveSectionService) {}
   @HostListener('window:scroll', ['$event'])
   handleScroll() {
     this.isSticky = window.pageYOffset > 0;
-    
   }
 
   toggleTheme() {
-   
     this.isDarkMode = !this.isDarkMode;
     if (this.isDarkMode) {
       document.body.classList.add('theme-dark');
@@ -33,10 +35,12 @@ export class NavbarComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
+    links.forEach((link) => {
       link.addEventListener('click', (e: Event) => {
         e.preventDefault();
-        const targetId = (e.currentTarget as HTMLAnchorElement).getAttribute('href')?.substring(1);
+        const targetId = (e.currentTarget as HTMLAnchorElement)
+          .getAttribute('href')
+          ?.substring(1);
         const targetElement = document.getElementById(targetId!);
         targetElement?.scrollIntoView({ behavior: 'smooth' });
       });
@@ -46,13 +50,16 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     this.loadSavedTheme();
     this.isDarkMode = localStorage.getItem('theme') === 'dark';
     this.applyTheme();
-    this.activeSectionService.activeSection$.subscribe(section => {
+    this.activeSectionService.activeSection$.subscribe((section) => {
       this.activeSection = section;
     });
   }
 
   setTheme(theme: string): void {
-    document.documentElement.classList.remove('theme-one-selected', 'theme-two-selected');
+    document.documentElement.classList.remove(
+      'theme-one-selected',
+      'theme-two-selected'
+    );
     document.documentElement.classList.add(`${theme}-selected`);
     saveTheme(theme);
   }
@@ -66,7 +73,6 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     }
   }
   @HostBinding('class.dark-mode') isDarkMode: boolean = false;
-
 
   toggleDarkMode() {
     this.isDarkMode = !this.isDarkMode;
@@ -82,11 +88,8 @@ export class NavbarComponent implements AfterViewInit, OnInit {
       document.body.classList.remove('theme-dark');
     }
   }
-  // Método para cambiar el estado del menú
+
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-    
   }
-
-
 }

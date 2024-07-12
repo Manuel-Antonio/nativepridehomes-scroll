@@ -1,10 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-::selection{
-  marker: black;
+::selection {
+  background: var(--color-primary); /* Color de fondo para el texto seleccionado */
+  color: white; /* Color del texto seleccionado */
 }
+::-webkit-scrollbar {
+  width: 1.2rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 6px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 :root {
   --color-primary: #901d20;
   --color-secondary: #7d7262;
@@ -115,24 +133,6 @@ nav {
 p {
   color: var(--color-info);
   transition: all 0.3s;
-}
-/* ---------------------- */
-::-webkit-scrollbar {
-  width: 1.2rem;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; 
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: 6px;
-  border: 3px solid #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
 }
 
 .progress-container {

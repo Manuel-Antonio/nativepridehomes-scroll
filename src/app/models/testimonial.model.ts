@@ -5,6 +5,6 @@ export class Testimonial {
     public img: string,
     public projectDescription: string,
     public date: string,
-    public rating: number // Nuevo campo de calificación
+    public rating: number
   ) {}
 }

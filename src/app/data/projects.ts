@@ -8,5 +8,5 @@ export const projects: Project[] = [
   new Project(4, 'Shopping Mall', 'Spacious shopping mall.', 'https://res.cloudinary.com/djsl4a5py/image/upload/v1720741202/NativePrideHomes/proyects/project4_haa1go.jpg', categories[1]),
   new Project(5, 'Factory', 'High-tech manufacturing facility.', 'https://res.cloudinary.com/djsl4a5py/image/upload/v1720741203/NativePrideHomes/proyects/project5_qnn32b.jpg', categories[2]),
   new Project(6, 'Warehouse', 'Large storage warehouse.', 'https://res.cloudinary.com/djsl4a5py/image/upload/v1720741203/NativePrideHomes/proyects/project6_jvc71h.jpg', categories[2]),
-  // Add more projects as needed
+
 ];

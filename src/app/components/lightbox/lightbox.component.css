@@ -42,7 +42,7 @@
 }
 
 .navigation span {
-  z-index: 10; /* Ensure navigation buttons are on top */
+  z-index: 10;
 }
 .btn-navigation {
   background-color: var(--color-light-transparent);

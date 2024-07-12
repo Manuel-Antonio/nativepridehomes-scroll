@@ -1,50 +1,146 @@
-<nav class="top-0 w-full z-50 fixed {{ isSticky ? 'mysticky shadow-lg  h-16' : 'h-28'}}">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 {{menuOpen ? 'dropdown-menu' : ''}}">
+<nav
+  class="top-0 w-full z-50 fixed {{
+    isSticky ? 'mysticky shadow-lg  h-16' : 'h-28'
+  }}"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 {{
+      menuOpen ? 'dropdown-menu' : ''
+    }}"
+  >
     <div class="flex justify-between h-16 items-center">
       <div class="flex-shrink-0">
         <a href="#home" class="nav-link text-2xl font-bold text-gray-800">
-          <img src="assets/icons/icono_native.svg" alt="" class="w-10 h-10">
+          <img src="assets/icons/icono_native.svg" alt="" class="w-10 h-10" />
         </a>
       </div>
-      <!-- Botón hamburguesa -->
+
       <div class="md:hidden">
-        <button class="btn-menu-movil flex justify-center items-center focus:outline-none" (click)="toggleMenu()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path *ngIf="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"></path>
-            <path *ngIf="menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"></path>
+        <button
+          class="btn-menu-movil flex justify-center items-center focus:outline-none"
+          (click)="toggleMenu()"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              *ngIf="!menuOpen"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+            <path
+              *ngIf="menuOpen"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
           </svg>
         </button>
       </div>
       <div class="hidden md:flex items-center space-x-4 menu-links">
-        <!-- Opciones del menú -->
-        <a href="#home" class=" {{activeSection === 'home' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">Home</a>
-        <a href="#about" class="{{activeSection === 'about' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">About</a>
-        <a href="#services" class="{{activeSection === 'services' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">Services</a>
-        <a href="#gallery" class="{{activeSection === 'gallery' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">Gallery</a>
-        <a href="#testimonials" class="{{activeSection === 'testimonials' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">Testimonials</a>
-        <a href="#contact" class="{{activeSection === 'contact' ? 'active-nav-link':'nav-link'}} px-3 py-2 rounded-md text-sm font-bold">Contact</a>
+        <a
+          href="#home"
+          class=" {{
+            activeSection === 'home' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="{{
+            activeSection === 'about' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="{{
+            activeSection === 'services' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >Services</a
+        >
+        <a
+          href="#gallery"
+          class="{{
+            activeSection === 'gallery' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >Gallery</a
+        >
+        <a
+          href="#testimonials"
+          class="{{
+            activeSection === 'testimonials' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="{{
+            activeSection === 'contact' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-2 rounded-md text-sm font-bold"
+          >Contact</a
+        >
       </div>
-      <!-- Botones de tema y modo oscuro -->
+
       <div class="flex space-x-2">
-        <!-- <button class="theme-button theme-one" (click)="setTheme('theme-one')"></button>
-        <button class="theme-button theme-two" (click)="setTheme('theme-two')"></button> -->
         <button class="theme-toggle" (click)="toggleDarkMode()">
           <i class="fa-solid fa-sun" *ngIf="isDarkMode"></i>
           <i class="fa-solid fa-moon" *ngIf="!isDarkMode"></i>
         </button>
       </div>
     </div>
-    <!-- Menú desplegable para móvil -->
+
     <div class="md:hidden" *ngIf="menuOpen">
-      <div class="flex flex-col  mt-4">
-        <a href="#home" class="{{activeSection === 'home' ? 'active-nav-link':'nav-link'}} px-3 py-3 text-sm font-medium block">Home</a>
-        <a href="#about" class="{{activeSection === 'about' ? 'active-nav-link':'nav-link'}} px-3 border-t-2 py-3 text-sm font-medium block">About</a>
-        <a href="#services" class="{{activeSection === 'services' ? 'active-nav-link':'nav-link'}} px-3 border-t-2 py-3 text-sm font-medium block">Services</a>
-        <a href="#gallery" class="{{activeSection === 'gallery' ? 'active-nav-link':'nav-link'}} px-3 border-t-2 py-3 text-sm font-medium block">Gallery</a>
-        <a href="#testimonials" class="{{activeSection === 'testimonials' ? 'active-nav-link':'nav-link'}} px-3 border-t-2 py-3 text-sm font-medium block">Testimonials</a>
-        <a href="#contact" class="{{activeSection === 'contact' ? 'active-nav-link':'nav-link'}} px-3 border-t-2 py-3 text-sm font-medium block">Contact</a>
+      <div class="flex flex-col mt-4">
+        <a
+          href="#home"
+          class="{{
+            activeSection === 'home' ? 'active-nav-link' : 'nav-link'
+          }} px-3 py-3 text-sm font-medium block"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="{{
+            activeSection === 'about' ? 'active-nav-link' : 'nav-link'
+          }} px-3 border-t-2 py-3 text-sm font-medium block"
+          >About</a
+        >
+        <a
+          href="#services"
+          class="{{
+            activeSection === 'services' ? 'active-nav-link' : 'nav-link'
+          }} px-3 border-t-2 py-3 text-sm font-medium block"
+          >Services</a
+        >
+        <a
+          href="#gallery"
+          class="{{
+            activeSection === 'gallery' ? 'active-nav-link' : 'nav-link'
+          }} px-3 border-t-2 py-3 text-sm font-medium block"
+          >Gallery</a
+        >
+        <a
+          href="#testimonials"
+          class="{{
+            activeSection === 'testimonials' ? 'active-nav-link' : 'nav-link'
+          }} px-3 border-t-2 py-3 text-sm font-medium block"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          class="{{
+            activeSection === 'contact' ? 'active-nav-link' : 'nav-link'
+          }} px-3 border-t-2 py-3 text-sm font-medium block"
+          >Contact</a
+        >
       </div>
     </div>
   </div>
