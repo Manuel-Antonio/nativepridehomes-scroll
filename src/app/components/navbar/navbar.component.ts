@@ -62,7 +62,7 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     if (savedTheme) {
       this.setTheme(savedTheme);
     } else {
-      this.setTheme('theme-one'); // Default theme
+      this.setTheme('theme-one');
     }
   }
   @HostBinding('class.dark-mode') isDarkMode: boolean = false;
@@ -72,6 +72,7 @@ export class NavbarComponent implements AfterViewInit, OnInit {
     this.isDarkMode = !this.isDarkMode;
     localStorage.setItem('theme', this.isDarkMode ? 'dark' : 'light');
     this.applyTheme();
+    this.activeSectionService.changeIsDark(this.isDarkMode);
   }
 
   private applyTheme() {
@@ -84,6 +85,7 @@ export class NavbarComponent implements AfterViewInit, OnInit {
   // Método para cambiar el estado del menú
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    
   }
 
 

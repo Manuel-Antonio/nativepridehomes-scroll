@@ -19,7 +19,7 @@
       </div>
       <div class="flex-1 relative">
         <button
-          class="absolute z-30 right-0 h-16 w-16 btn-close transition duration-200 ease-in-out"
+          class="absolute z-30 right-0 h-12 w-12 lg:h-16 lg:w-16 btn-close transition duration-200 ease-in-out"
           (click)="closeLightbox()"
         >
           <i class="fa-solid fa-xmark"></i>
@@ -28,17 +28,17 @@
           class="navigation absolute inset-y-0 left-0 flex items-center justify-center ms-5"
         >
           <span
-            class="text-white text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full w-12 h-12 flex items-center justify-center"
+            class="text-white text-2xl lg:text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full h-8 w-8 lg:h-12 lg:w-12 flex items-center justify-center"
             (click)="prevImage()"
           >
-            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-left "></i>
           </span>
         </div>
         <div
           class="navigation absolute inset-y-0 right-0 flex items-center justify-center me-5"
         >
           <span
-            class="text-white text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full w-12 h-12 flex items-center justify-center"
+            class="text-white text-2xl lg:text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full h-8 w-8 lg:h-12 lg:w-12 flex items-center justify-center"
             (click)="nextImage()"
           >
             <i class="fa-solid fa-angle-right"></i>
@@ -51,7 +51,7 @@
         <div
           class="description absolute bottom-0 left-0 w-full p-4"
         >
-          <h2 class="text-2xl font-black">
+          <h2 class="text-xl lg:text-2xl font-black">
             {{ projects[selectedIndex].name }}
           </h2>
           <p class="text-md">{{ projects[selectedIndex].description }}</p>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 ::selection{
-  marker: var(--color-accent);
+  marker: black;
 }
 :root {
   --color-primary: #901d20;
