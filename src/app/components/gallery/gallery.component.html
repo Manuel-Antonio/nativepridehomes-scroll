@@ -1,11 +1,14 @@
-<section id="gallery" class="pt-20 bg-background-color transition-colors duration-0">
+<section
+  id="gallery"
+  class="pt-20 bg-background-color transition-colors duration-0"
+>
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-8 text-text-color">Featured projects</h2>
-    <div class="flex justify-center mb-8 flex-wrap  gap-y-4">
+    <div class="flex justify-center mb-8 flex-wrap gap-y-4">
       <button
         *ngFor="let category of categories"
         (click)="filterProjects(category)"
-        class="bg-primary-color text-text-color py-2 px-4 rounded-full mx-2 hover:bg-accent-color transition-colors "
+        class="bg-primary-color text-text-color py-2 px-4 rounded-full mx-2 hover:bg-accent-color transition-colors"
       >
         {{ category.name }}
       </button>
@@ -17,13 +20,26 @@
       </button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div *ngFor="let project of filteredProjects" class="bg-primary-color  p-6 rounded shadow-md panel-small-container" data-aos="zoom-in">
+      <div
+        *ngFor="let project of filteredProjects; let i = index"
+        class="bg-primary-color p-6 rounded shadow-md panel-small-container"
+        data-aos="zoom-in"
+      >
         <div class="project-image-container h-60">
-          <img [src]="project.img" [alt]="project.name" loading="lazy" class="project-image h-full w-full object-cover rounded mb-4">
+          <img
+            [src]="project.img"
+            [alt]="project.name"
+            loading="lazy"
+            class="project-image h-full w-full object-cover rounded mb-4"
+            (click)="openLightbox(i)"
+          />
         </div>
-        <h3 class="text-xl font-semibold my-2 text-color">{{ project.name }}</h3>
+        <h3 class="text-xl font-semibold my-2 text-color">
+          {{ project.name }}
+        </h3>
         <p class="text-text-color">{{ project.description }}</p>
       </div>
     </div>
   </div>
 </section>
+

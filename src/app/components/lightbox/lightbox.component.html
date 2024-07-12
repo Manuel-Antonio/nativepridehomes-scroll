@@ -1,0 +1,20 @@
+<div *ngIf="lightboxOpen" class="lightbox" (click)="closeLightbox()">
+  <div class="lightbox-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeLightbox()">&times;</span>
+    <img [src]="projects[selectedIndex].img" class="lightbox-image">
+    <div class="navigation">
+      <span class="prev" (click)="prevImage()">&#10094;</span>
+      <span class="next" (click)="nextImage()">&#10095;</span>
+    </div>
+    <div class="description">
+      <h2>{{projects[selectedIndex].name}}</h2>
+      <p>{{projects[selectedIndex].description}}</p>
+    </div>
+    <div class="thumbnails">
+      <img *ngFor="let project of projects; let i = index" 
+           [src]="project.img" 
+           [class.selected]="i === selectedIndex" 
+           (click)="openLightbox(projects, i)">
+    </div>
+  </div>
+</div>

@@ -13,6 +13,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +26,15 @@ import { ScrollToTopComponent } from './components/scroll-to-top/scroll-to-top.c
     TestimonialsComponent,
     ContactComponent,
     FooterComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    LightboxComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

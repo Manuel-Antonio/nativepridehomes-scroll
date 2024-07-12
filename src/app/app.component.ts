@@ -5,9 +5,9 @@ import { ActiveSectionService } from './services/active-section.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'nativepridehomes-scroll';
   constructor(private activeSectionService: ActiveSectionService) {}
   @HostListener('window:scroll', ['$event'])
@@ -35,6 +35,4 @@ export class AppComponent implements OnInit{
       offset: 200,
     });
   }
-
-  
 }
