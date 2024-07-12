@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit() {
     AOS.init({
-      duration: 600,
+      duration: 400,
       easing: 'ease-out',
       anchorPlacement: 'top-bottom',
       offset: 200,

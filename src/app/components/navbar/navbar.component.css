@@ -66,10 +66,7 @@ nav.mysticky {
 .theme-one {
   background-image: url('/image1.png');
 }
-.menu-links >a:focus{
-  background-color: var(--color-primary);
-  color: white;
-}
+
 
 .dropdown-menu {
   background-color: var(--color-light-transparent);
