@@ -1,20 +1,62 @@
-<div *ngIf="lightboxOpen" class="lightbox" (click)="closeLightbox()">
-  <div class="lightbox-content" (click)="$event.stopPropagation()">
-    <span class="close" (click)="closeLightbox()">&times;</span>
-    <img [src]="projects[selectedIndex].img" class="lightbox-image">
-    <div class="navigation">
-      <span class="prev" (click)="prevImage()">&#10094;</span>
-      <span class="next" (click)="nextImage()">&#10095;</span>
-    </div>
-    <div class="description">
-      <h2>{{projects[selectedIndex].name}}</h2>
-      <p>{{projects[selectedIndex].description}}</p>
-    </div>
-    <div class="thumbnails">
-      <img *ngFor="let project of projects; let i = index" 
-           [src]="project.img" 
-           [class.selected]="i === selectedIndex" 
-           (click)="openLightbox(projects, i)">
+<div
+  *ngIf="lightboxOpen"
+  class="fixed inset-0 z-50 lightbox bg-opacity-70 flex items-center justify-center"
+  (click)="closeLightbox()"
+>
+  <div
+    class="relative lightbox-container rounded-lg overflow-hidden shadow-lg transition-transform transform scale-95 md:scale-100 duration-300 ease-in-out"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="flex flex-col md:flex-row">
+      <div class="thumbnails flex flex-row md:flex-col overflow-auto p-2 gap-2">
+        <img
+          *ngFor="let project of projects; let i = index"
+          [src]="project.img"
+          [class.selected]="i === selectedIndex"
+          class="thumbnail w-12 h-12 md:w-20 md:h-20 object-cover overflow-hidden cursor-pointer mb-2 md:mb-0 md:mr-2 rounded-lg border-2 border-transparent hover:border-gray-500 transition duration-200 ease-in-out"
+          (click)="openLightbox(projects, i)"
+        />
+      </div>
+      <div class="flex-1 relative">
+        <button
+          class="absolute z-30 right-0 h-16 w-16 btn-close transition duration-200 ease-in-out"
+          (click)="closeLightbox()"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div
+          class="navigation absolute inset-y-0 left-0 flex items-center justify-center ms-5"
+        >
+          <span
+            class="text-white text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full w-12 h-12 flex items-center justify-center"
+            (click)="prevImage()"
+          >
+            <i class="fa-solid fa-angle-left"></i>
+          </span>
+        </div>
+        <div
+          class="navigation absolute inset-y-0 right-0 flex items-center justify-center me-5"
+        >
+          <span
+            class="text-white text-4xl cursor-pointer transition duration-200 ease-in-out btn-navigation rounded-full w-12 h-12 flex items-center justify-center"
+            (click)="nextImage()"
+          >
+            <i class="fa-solid fa-angle-right"></i>
+          </span>
+        </div>
+        <img
+          [src]="projects[selectedIndex].img"
+          class="lightbox-image w-full h-auto object-contain transition-transform duration-300 ease-in-out"
+        />
+        <div
+          class="description absolute bottom-0 left-0 w-full p-4"
+        >
+          <h2 class="text-2xl font-black">
+            {{ projects[selectedIndex].name }}
+          </h2>
+          <p class="text-md">{{ projects[selectedIndex].description }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>

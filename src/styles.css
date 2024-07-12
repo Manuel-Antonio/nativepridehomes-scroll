@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+::selection{
+  marker: var(--color-accent);
+}
 :root {
   --color-primary: #901d20;
   --color-secondary: #7d7262;
