@@ -7,7 +7,7 @@
 <div
   *ngIf="isWhatsappOpen"
   data-aos="fade-up"
-  class=" fixed bottom-20 container-float panel-small-container shadow-lg left-3 z-20 flex p-3 gap-2 items-center rounded-lg px-4 py-3 focus:outline-none bg-transparent"
+  class=" fixed bottom-20 container-float panel-small-container shadow-lg left-3 z-20 sm:flex p-3 gap-2 items-center rounded-lg px-4 py-3 focus:outline-none bg-transparent"
   [class.scale-0]="!isWhatsappOpen"
   [class.scale-100]="isWhatsappOpen"
 >
@@ -15,10 +15,10 @@
     <img
       src="https://res.cloudinary.com/djsl4a5py/image/upload/v1721273322/NativePrideHomes/QRs/wa.link_u5zoaa_urcrvj.png"
       alt=""
-      class="w-36 h-36"
+      class="w-36 h-36 mx-auto"
     />
   </div>
-  <div>Or</div>
+  <div class="text-center">Or</div>
   <div class="frm-ws">
     <textarea
       id="message"
