@@ -33,6 +33,7 @@
   --color-accent: #901d20;
   --color-accent2: #f7fafc;
   --color-light-transparent: rgba(255, 255, 255, 0.95);
+  --color-dark-transparent: rgba(26, 32, 44, 0.95);
 }
 
 .theme-dark {
@@ -43,6 +44,7 @@
   --color-accent: #f7fafc;
   --color-accent2: #c9b79d;
   --color-light-transparent: rgba(26, 32, 44, 0.95);
+  --color-dark-transparent: rgba(255, 255, 255, 0.95);
 }
 
 html,

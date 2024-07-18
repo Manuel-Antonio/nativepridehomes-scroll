@@ -1,0 +1,38 @@
+<button
+  class="text-white fixed bottom-4 left-4 bg-green-600 rounded-full shadow-lg text-4xl w-14 h-14 flex justify-center items-center transition-transform duration-300 ease-in-out hover:scale-110"
+  (click)="toggleWhatsapp()"
+  data-aos="fade-up"
+>
+  <i class="fab fa-whatsapp"></i>
+</button>
+<div
+  *ngIf="isWhatsappOpen"
+  data-aos="fade-up"
+  class=" fixed bottom-20 container-float panel-small-container shadow-lg left-3 z-20 flex p-3 gap-2 items-center rounded-lg px-4 py-3 focus:outline-none bg-transparent"
+  [class.scale-0]="!isWhatsappOpen"
+  [class.scale-100]="isWhatsappOpen"
+>
+  <div>
+    <img
+      src="https://res.cloudinary.com/djsl4a5py/image/upload/v1721273322/NativePrideHomes/QRs/wa.link_u5zoaa_urcrvj.png"
+      alt=""
+      class="w-36 h-36"
+    />
+  </div>
+  <div>Or</div>
+  <div class="frm-ws">
+    <textarea
+      id="message"
+      [(ngModel)]="message"
+      name="message"
+      class="form-input mt-1 p-2 block bg-transparent w-full border h-32 rounded-md border-gray-300 shadow-sm focus:ring-opacity-50"
+      placeholder="Hello! I am interested in learning more about the services you offer. Thank you. 😀"
+    ></textarea>
+    <button
+      (click)="sendWhatsappMessage()"
+      class="bg-blue-500 hover:bg-blue-700 mt-3 text-white p-2 rounded w-full"
+    >
+      Send to WhatsApp
+    </button>
+  </div>
+</div>

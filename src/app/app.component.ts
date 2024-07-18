@@ -31,8 +31,7 @@ export class AppComponent implements OnInit {
     AOS.init({
       duration: 400,
       easing: 'ease-out',
-      anchorPlacement: 'top-bottom',
-      offset: 200,
+      anchorPlacement: 'top-bottom'
     });
   }
 }
