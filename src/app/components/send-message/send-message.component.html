@@ -7,12 +7,13 @@
 <div
   *ngIf="isWhatsappOpen"
   data-aos="fade-up"
-  class=" fixed bottom-20 container-float panel-small-container shadow-lg left-3 z-20 sm:flex p-3 gap-2 items-center rounded-lg px-4 py-3 focus:outline-none bg-transparent"
+  class="fixed bottom-20 container-float panel-small-container shadow-lg left-3 z-20 sm:flex p-3 gap-2 items-center rounded-lg px-4 py-3 focus:outline-none bg-transparent"
   [class.scale-0]="!isWhatsappOpen"
   [class.scale-100]="isWhatsappOpen"
 >
   <div>
     <img
+      loading="lazy"
       src="https://res.cloudinary.com/djsl4a5py/image/upload/v1721273322/NativePrideHomes/QRs/wa.link_u5zoaa_urcrvj.png"
       alt="whatsapp qr"
       class="w-36 h-36 mx-auto"
