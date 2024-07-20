@@ -14,7 +14,6 @@
       </p>
     </div>
 
-    <!-- Mission Statement -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 panel-mission">
       <div class="rounded-lg shadow-lg p-6 mission-style" data-aos="fade-right">
         <h3 class="text-3xl font-semibold mb-4">Our Mission</h3>
@@ -68,15 +67,14 @@
           *ngFor="let profile of profiles"
         >
           <picture>
-            <source [srcset]="profile.imgWebp" type="image/webp" width="216"
-            height="216"/>
+            <source [srcset]="profile.imgWebp" type="image/webp" width="200" height="200"/>
             <img
               [src]="profile.image"
               [alt]="profile.name"
               loading="lazy"
-              width="216"
-              height="216"
-              class="h-48 rounded-lg mb-4 relative top-8"
+              width="200"
+              height="200"
+              class="rounded-lg mb-4 relative top-8"
               data-aos="flip-left"
             />
           </picture>
