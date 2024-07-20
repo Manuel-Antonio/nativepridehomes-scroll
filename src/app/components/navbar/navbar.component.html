@@ -1,5 +1,13 @@
-<nav class="top-0 w-full z-50 fixed {{ isSticky ? 'mysticky shadow-lg h-16' : 'h-28' }}">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 {{ menuOpen ? 'dropdown-menu' : '' }}">
+<nav
+  class="top-0 w-full z-50 fixed {{
+    isSticky ? 'mysticky shadow-lg h-16' : 'h-28'
+  }}"
+>
+  <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 {{
+      menuOpen ? 'dropdown-menu' : ''
+    }}"
+  >
     <div class="flex justify-between h-16 items-center">
       <div class="flex-shrink-0">
         <a href="#home" class="nav-link text-2xl font-bold text-gray-800">
@@ -12,8 +20,18 @@
         </a>
       </div>
       <div class="md:hidden">
-        <button class="btn-menu-movil flex justify-center items-center focus:outline-none" (click)="toggleMenu()">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <button
+          class="btn-menu-movil flex justify-center items-center focus:outline-none"
+          (click)="toggleMenu()"
+          aria-label="Open mobile menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <path
               *ngIf="!menuOpen"
               stroke-linecap="round"
@@ -32,15 +50,63 @@
         </button>
       </div>
       <div class="hidden md:flex items-center space-x-4 menu-links">
-        <a href="#home" [ngClass]="{ 'active-nav-link': activeSection === 'home', 'nav-link': activeSection !== 'home' }" class="px-3 py-2 rounded-md text-sm font-bold">Home</a>
-        <a href="#about" [ngClass]="{ 'active-nav-link': activeSection === 'about', 'nav-link': activeSection !== 'about' }" class="px-3 py-2 rounded-md text-sm font-bold">About</a>
-        <a href="#services" [ngClass]="{ 'active-nav-link': activeSection === 'services', 'nav-link': activeSection !== 'services' }" class="px-3 py-2 rounded-md text-sm font-bold">Services</a>
-        <a href="#gallery" [ngClass]="{ 'active-nav-link': activeSection === 'gallery', 'nav-link': activeSection !== 'gallery' }" class="px-3 py-2 rounded-md text-sm font-bold">Gallery</a>
-        <a href="#testimonials" [ngClass]="{ 'active-nav-link': activeSection === 'testimonials', 'nav-link': activeSection !== 'testimonials' }" class="px-3 py-2 rounded-md text-sm font-bold">Testimonials</a>
-        <a href="#contact" [ngClass]="{ 'active-nav-link': activeSection === 'contact', 'nav-link': activeSection !== 'contact' }" class="px-3 py-2 rounded-md text-sm font-bold">Contact</a>
+        <a
+          href="#home"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'home',
+            'nav-link': activeSection !== 'home'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >Home</a
+        >
+        <a
+          href="#about"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'about',
+            'nav-link': activeSection !== 'about'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >About</a
+        >
+        <a
+          href="#services"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'services',
+            'nav-link': activeSection !== 'services'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >Services</a
+        >
+        <a
+          href="#gallery"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'gallery',
+            'nav-link': activeSection !== 'gallery'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >Gallery</a
+        >
+        <a
+          href="#testimonials"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'testimonials',
+            'nav-link': activeSection !== 'testimonials'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'contact',
+            'nav-link': activeSection !== 'contact'
+          }"
+          class="px-3 py-2 rounded-md text-sm font-bold"
+          >Contact</a
+        >
       </div>
       <div class="flex space-x-2">
-        <button class="theme-toggle" (click)="toggleDarkMode()">
+        <button class="theme-toggle" (click)="toggleDarkMode()" aria-label="Change theme">
           <i class="fa-solid fa-sun" *ngIf="isDarkMode"></i>
           <i class="fa-solid fa-moon" *ngIf="!isDarkMode"></i>
         </button>
@@ -48,12 +114,60 @@
     </div>
     <div class="md:hidden" *ngIf="menuOpen" data-aos="fade-down">
       <div class="flex flex-col mt-4">
-        <a href="#home" [ngClass]="{ 'active-nav-link': activeSection === 'home', 'nav-link': activeSection !== 'home' }" class="px-3 py-3 text-sm font-medium block">Home</a>
-        <a href="#about" [ngClass]="{ 'active-nav-link': activeSection === 'about', 'nav-link': activeSection !== 'about' }" class="px-3 border-t-2 py-3 text-sm font-medium block">About</a>
-        <a href="#services" [ngClass]="{ 'active-nav-link': activeSection === 'services', 'nav-link': activeSection !== 'services' }" class="px-3 border-t-2 py-3 text-sm font-medium block">Services</a>
-        <a href="#gallery" [ngClass]="{ 'active-nav-link': activeSection === 'gallery', 'nav-link': activeSection !== 'gallery' }" class="px-3 border-t-2 py-3 text-sm font-medium block">Gallery</a>
-        <a href="#testimonials" [ngClass]="{ 'active-nav-link': activeSection === 'testimonials', 'nav-link': activeSection !== 'testimonials' }" class="px-3 border-t-2 py-3 text-sm font-medium block">Testimonials</a>
-        <a href="#contact" [ngClass]="{ 'active-nav-link': activeSection === 'contact', 'nav-link': activeSection !== 'contact' }" class="px-3 border-t-2 py-3 text-sm font-medium block">Contact</a>
+        <a
+          href="#home"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'home',
+            'nav-link': activeSection !== 'home'
+          }"
+          class="px-3 py-3 text-sm font-medium block"
+          >Home</a
+        >
+        <a
+          href="#about"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'about',
+            'nav-link': activeSection !== 'about'
+          }"
+          class="px-3 border-t-2 py-3 text-sm font-medium block"
+          >About</a
+        >
+        <a
+          href="#services"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'services',
+            'nav-link': activeSection !== 'services'
+          }"
+          class="px-3 border-t-2 py-3 text-sm font-medium block"
+          >Services</a
+        >
+        <a
+          href="#gallery"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'gallery',
+            'nav-link': activeSection !== 'gallery'
+          }"
+          class="px-3 border-t-2 py-3 text-sm font-medium block"
+          >Gallery</a
+        >
+        <a
+          href="#testimonials"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'testimonials',
+            'nav-link': activeSection !== 'testimonials'
+          }"
+          class="px-3 border-t-2 py-3 text-sm font-medium block"
+          >Testimonials</a
+        >
+        <a
+          href="#contact"
+          [ngClass]="{
+            'active-nav-link': activeSection === 'contact',
+            'nav-link': activeSection !== 'contact'
+          }"
+          class="px-3 border-t-2 py-3 text-sm font-medium block"
+          >Contact</a
+        >
       </div>
     </div>
   </div>
