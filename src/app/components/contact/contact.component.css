@@ -22,3 +22,9 @@
   color: var(--color-accent);
   font-weight: 700;
 }
+
+.bg-map {
+  background-color: var(--color-white-two);
+}
+
+

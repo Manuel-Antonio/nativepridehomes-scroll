@@ -13,6 +13,8 @@ export class ContactComponent {
   isCompleteLink: boolean = false;
   recipient = 'manuelhuaman1998@gmail.com';
   mailToLink!: SafeUrl;
+  mapLoaded = false;
+
   constructor(private fb: FormBuilder, private sanitizer: DomSanitizer) {
     this.contactForm = this.fb.group({
       subject: ['', Validators.required],
@@ -52,7 +54,10 @@ export class ContactComponent {
       this.mailToLink = this.sanitizer.bypassSecurityTrustUrl(mailTo);
       this.isCompleteLink = true;
       this.contactForm.reset();
-     
     }
+  }
+
+  loadMap() {
+    this.mapLoaded = true;
   }
 }
