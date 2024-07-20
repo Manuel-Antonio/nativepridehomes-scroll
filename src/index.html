@@ -16,7 +16,7 @@
     <meta name="author" content="Native Pride Homes" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link async href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       rel="preload"
@@ -25,9 +25,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preload" href="path/to/font.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="path/to/critical-image.webp" as="image">
+    
   </head>
   <body>
     <app-root></app-root>
   </body>
 </html>
-<script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script async src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
