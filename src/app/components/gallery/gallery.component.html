@@ -26,13 +26,16 @@
         data-aos="zoom-in"
       >
         <div class="project-image-container h-60">
-          <img
-            [src]="project.img"
-            [alt]="project.name"
-            loading="lazy"
-            class="project-image h-full w-full object-cover rounded mb-4 cursor-pointer"
-            (click)="openLightbox(i)"
-          />
+          <picture>
+            <source [srcset]="project.imgWebp" type="image/webp">
+            <img
+              [src]="project.img"
+              [alt]="project.name"
+              loading="lazy"
+              class="project-image h-full w-full object-cover rounded mb-4 cursor-pointer"
+              (click)="openLightbox(i)"
+            />
+          </picture>
         </div>
         <h3 class="text-xl font-semibold my-2 text-color">
           {{ project.name }}
