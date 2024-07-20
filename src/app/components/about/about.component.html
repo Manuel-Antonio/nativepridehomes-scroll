@@ -36,27 +36,21 @@
     <div class="mb-12">
       <h3 class="text-3xl font-semibold mb-4">Our Core Values</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 panel-core">
-        <div
-          class="p-6 panel-small-container rounded-lg shadow-lg"
-        >
+        <div class="p-6 panel-small-container rounded-lg shadow-lg">
           <h4 class="text-2xl font-bold mb-4">Quality</h4>
           <p data-aos="zoom-in">
             We use only the best materials and craftsmanship to ensure our homes
             are built to last.
           </p>
         </div>
-        <div
-          class="p-6 panel-small-container rounded-lg shadow-lg"
-        >
+        <div class="p-6 panel-small-container rounded-lg shadow-lg">
           <h4 class="text-2xl font-bold mb-4">Integrity</h4>
           <p data-aos="zoom-in">
             We conduct our business with the highest level of honesty and
             transparency.
           </p>
         </div>
-        <div
-          class="p-6 panel-small-container rounded-lg shadow-lg"
-        >
+        <div class="p-6 panel-small-container rounded-lg shadow-lg">
           <h4 class="text-2xl font-bold mb-4">Customer Satisfaction</h4>
           <p data-aos="zoom-in">
             We strive to exceed our clients' expectations at every step of the
@@ -69,25 +63,33 @@
     <div class="mb-12">
       <h3 class="text-3xl font-semibold mb-4">Meet Our Team</h3>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="flex items-center flex-col" *ngFor="let profile of profiles">
+        <div
+          class="flex items-center flex-col"
+          *ngFor="let profile of profiles"
+        >
           <picture>
-            <source [srcset]="profile.imgWebp" type="image/webp">
+            <source [srcset]="profile.imgWebp" type="image/webp" width="216"
+            height="216"/>
             <img
-            [src]="profile.image"
-            [alt]="profile.name"
-            loading="lazy"
-            class="h-48 rounded-lg mb-4 relative top-8"
-            data-aos="flip-left"
-          />
+              [src]="profile.image"
+              [alt]="profile.name"
+              loading="lazy"
+              width="216"
+              height="216"
+              class="h-48 rounded-lg mb-4 relative top-8"
+              data-aos="flip-left"
+            />
           </picture>
-          
-          <div class="p-6 panel-small-container rounded-lg shadow-lg text-center">
-            <h4 class="text-2xl font-bold mb-2">{{profile.name}}</h4>
+
+          <div
+            class="p-6 panel-small-container rounded-lg shadow-lg text-center"
+          >
+            <h4 class="text-2xl font-bold mb-2">{{ profile.name }}</h4>
             <p class="text-sm team-job dark:text-gray-300">
-             {{profile.occupation}}
+              {{ profile.occupation }}
             </p>
             <p>
-              {{profile.description}}
+              {{ profile.description }}
             </p>
           </div>
         </div>
