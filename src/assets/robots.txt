@@ -1,0 +1,12 @@
+# Bloquear acceso a las carpetas de administración y login para todos los rastreadores
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /private/
+
+# Permitir acceso al directorio específico y otras partes del sitio para todos los rastreadores
+Allow: /rwim8aqa
+Allow: /
+
+# Proporcionar la ubicación del mapa del sitio
+Sitemap: http://nativepridehomes.com/rwim8aqa/sitemap.xml
