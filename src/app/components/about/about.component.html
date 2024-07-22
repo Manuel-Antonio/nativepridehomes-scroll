@@ -59,39 +59,5 @@
       </div>
     </div>
 
-    <div class="mb-12">
-      <h3 class="text-3xl font-semibold mb-4">Meet Our Team</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div
-          class="flex items-center flex-col"
-          *ngFor="let profile of profiles"
-        >
-          <picture>
-            <source [srcset]="profile.imgWebp" type="image/webp" width="200" height="200"/>
-            <img
-              [src]="profile.image"
-              [alt]="profile.name"
-              loading="lazy"
-              width="200"
-              height="200"
-              class="rounded-lg mb-4 relative top-8"
-              data-aos="flip-left"
-            />
-          </picture>
-
-          <div
-            class="p-6 panel-small-container rounded-lg shadow-lg text-center"
-          >
-            <h4 class="text-2xl font-bold mb-2">{{ profile.name }}</h4>
-            <p class="text-sm team-job dark:text-gray-300">
-              {{ profile.occupation }}
-            </p>
-            <p>
-              {{ profile.description }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
