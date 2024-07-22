@@ -33,7 +33,7 @@ export class TestimonialsComponent {
     setTimeout(() => {
       this.currentIndex = (this.currentIndex === 0) ? this.testimonials.length - 1 : this.currentIndex - 1;
       this.showTestimonial = true;
-    }, 500);
+    }, 0);
   }
 
   nextTestimonial(): void {
@@ -41,6 +41,6 @@ export class TestimonialsComponent {
     setTimeout(() => {
       this.currentIndex = (this.currentIndex === this.testimonials.length - 1) ? 0 : this.currentIndex + 1;
       this.showTestimonial = true;
-    }, 500);
+    }, 0);
   }
 }
